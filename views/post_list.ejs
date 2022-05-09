@@ -4,8 +4,9 @@
 <body>
 <h1>Posts</h1>
 <ol>
-    <% results.forEach(function(post) {%>
+    <% postList.results.forEach(function(post) {%>
         <li>
+<<<<<<< HEAD
             <h2><%= post.postedBy.name %></h2>
             <p><%= post.message %></p>
            
@@ -30,6 +31,9 @@
                     <%}); %> 
                 </p>
             </section>
+=======
+            <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %>
+>>>>>>> ee2853089641a0f325d525784b20cd8c8ed84a46
         </li>
         
     <% }); %>
