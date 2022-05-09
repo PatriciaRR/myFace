@@ -6,8 +6,17 @@
 <ol>
     <% results.forEach(function(post) {%>
         <li>
-            <%= post.message %>
+            <p><%= post.message %></p>
+            <p>Post created by ... <%= post.PostUserModel %> at <%= post.createdAt %></p>
+            <img 
+                src="<%= post.imageUrl %>"
+                width="60"
+                height="60"
+            >  
+            <p>Post liked by:  <%= post.likedBy.PostUserModel %> </p>  
+            <p>Post disliked by:  <%= post.dislikedBy.PostUserModel %> </p>  
         </li>
+        
     <% }); %>
 </ol>
 </body>
