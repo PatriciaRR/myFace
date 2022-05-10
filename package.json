@@ -21,12 +21,8 @@
     "@types/express-validator": "^3.0.0",
     "@types/knex": "^0.16.1",
     "cors": "^2.8.5",
-<<<<<<< HEAD
-    "ejs": "^3.1.7",
-=======
     "date-fns": "^2.28.0",
-    "ejs": "3.1.5",
->>>>>>> ee2853089641a0f325d525784b20cd8c8ed84a46
+    "ejs": "^3.1.7",
     "express": "^4.17.1",
     "express-async-errors": "3.1.1",
     "express-validator": "^6.9.2",

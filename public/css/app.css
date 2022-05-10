@@ -1,1 +1,59 @@
-/* Add your styles here. */
+body {
+    font: normal 15px Verdana black;
+    margin 0px
+}
+
+.navigationlinks {
+    background-color: blue
+    top: 0;
+}
+
+.title {
+    position: sticky;
+    font: 100px;
+}
+
+.button {
+    background-color: 
+    border: none;
+    color: black;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+  }
+
+.postContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 100px;
+    justify-items: left;
+    width: 100%;
+    margin: auto;
+    padding-top: 30px ;
+    list-style-type: none;
+    
+}
+  
+.post {
+    background-color: white;
+    list-style-type: none;
+    width: 500px;
+}
+
+.italics {
+    font-style:italic;
+    font-size: 12px;
+}
+  
+.imageContainer {
+    margin: 0;
+  }
+  
+
+img {
+    object-fit: cover; 
+}
+  
