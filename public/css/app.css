@@ -1,11 +1,12 @@
 body {
     font: normal 15px Verdana black;
-    margin 0px
+    margin: 0px;
 }
 
 .navigationlinks {
-    background-color: blue
-    top: 0;
+    background-color: aliceblue;
+    top: 25px;
+    bottom: 25px;
 }
 
 .title {
@@ -14,7 +15,7 @@ body {
 }
 
 .button {
-    background-color: 
+    background-color: rgb(204, 240, 204);
     border: none;
     color: black;
     padding: 20px 30px;
@@ -22,7 +23,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
-  }
+}
 
 .postContainer {
     display: grid;
@@ -33,8 +34,7 @@ body {
     width: 100%;
     margin: auto;
     padding-top: 30px ;
-    list-style-type: none;
-    
+    list-style-type: none;  
 }
   
 .post {
@@ -47,10 +47,6 @@ body {
     font-style:italic;
     font-size: 12px;
 }
-  
-.imageContainer {
-    margin: 0;
-  }
   
 
 img {

@@ -6,7 +6,7 @@
 <ol class="post-list">
     <% results.forEach(function(user) {%>
         <li>
-            <p><a href = http://localhost:3001/users/<%= user.id %>/><%= user.name %></a></p>
+            <p></p><a href="users/<%= user.id %>"> <%= user.name %></a></p>
             
             <img 
                 src="<%= user.profileImageUrl %>"

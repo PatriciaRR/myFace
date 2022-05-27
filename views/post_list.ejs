@@ -1,37 +1,41 @@
 <html lang="en-gb">
-<%- include('_head') -%>
-<%- include('_header') -%>
+  <%- include('_head') -%> <%- include('_header') -%>
+  <body>
+    <h1 class="title">All posts</h1>
+    <button><a href="/posts/create/" class="button">New Post</a></button>
 
-<body>
-<h1 class="title">Posts</h1>
-<button><a href="/post/create" class="button">New Post</a></button>
+    <ul class="postContainer" <% postList.results.forEach(function(post) {%>
+      <li class>
+        <p><%= post.message %></p>
+        <div class="imageContainer">
+          <img
+            src="<%= post.imageUrl %>"
+            width="500"
+            alt="Photo posted by user"
+          />
+        </div>
+        <p>
+          Posted by
+          <a href="/users/<%= post.postedBy.name %>/">
+            <%= post.postedBy.name %></a
+          >
+        </p>
+        <p class="italics">
+          Created on <%=format(post.createdAt, "dd-MM-yyyy HH:mm:ss") %>
+        </p>
+        <p><%= post.likedBy.length %> likes</p>
+        <p><button onclick="likePost(<%= post.id %>)">Like</button></p>
+      </li>
+      <% }); %>
+    </ul>
 
-<ol class="postContainer"
-    <% postList.results.forEach(function(post) {%> 
-        <li class>
-            <figure class="imageContainer">
-                <img src="<%= post.imageUrl %>" width="500" alt="Photo posted by user">
-            </figure>
-            <h3><%= post.message %></h3>
-            <h4>Posted by <%= post.postedBy.name %><a href="/users/<%= post.postedBy.name%>"></a></h4>
-            <p class="italics">Created on <%=format(post.createdAt, "dd-MM-yyyy HH:mm:ss") %></p>
-            <h4> Post liked by:</h4>
-            <p> <% post.likedBy.forEach(function(user) {%> 
-                        <%= user.name %>,
-                        <% }); %> 
-            </p>
-    <% }); %>
-</ol>
-<nav class="navigationLinks">
-    <%if (postList.previous) { %>
-        <a href="<%= postList.previous %>">Previous</a>
-    <% } %>
-    <%if (postList.next) { %>
-        <a href="<%= postList.next %>">Next</a>
-    <% } %>
-</nav>
-
-</body>
-<%- include('_footer') -%>
+    <nav class="navigationLinks">
+      <%if (postList.previous) { %>
+      <a href="<%= postList.previous %>">Previous</a>
+      <% } %> <%if (postList.next) { %>
+      <a href="<%= postList.next %>">Next</a>
+      <% } %>
+    </nav>
+  </body>
+  <%- include('_footer') -%>
 </html>
-
