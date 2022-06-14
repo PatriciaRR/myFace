@@ -1,26 +1,40 @@
 <html lang="en-gb">
   <%- include('_head') -%> <%- include('_header') -%>
   <body>
-    <img src="<%= profileImageUrl %>" width="60" height="60" alt="profile" />
-    <img src="<%= coverImageUrl %>" alt="cover" width="200" />
-    <div>
-      <h3><%= name %></h3>
-      <h4><%= username %></h4>
-      <h4><%= email %></h4>
+    <img
+      class="cover-image"
+      src="<%= coverImageUrl %>"
+      alt="cover"
+      width="200"
+    />
+    <div class="profile-image-container">
+      <img
+        class="profile-image"
+        src="<%= profileImageUrl %>"
+        width="60"
+        height="60"
+        alt="profile"
+      />
     </div>
-
-    <h3><%= name %>'s Post Collection</h3>
-    <ul>
-      <% posts.forEach(function(post) { %>
-      <li>
-        <img src="<%= post.imageUrl %>" />
-        <div>
-          <p>Created <%= post.createdAt %></p>
-          <p><%= post.message %></p>
-        </div>
-      </li>
-      <% }); %>
-    </ul>
+    <div class="namebox">
+      <h2 class="username main"><%= name %></h2>
+      <h4 class="username"><%= username %></h4>
+      <h4 class="username"><%= email %></h4>
+    </div>
+    <h2 class="subtitle"><%= name %>'s Posts</h2>
+    <div class="all-post-container">
+      <ul class="all-posts">
+        <% posts.forEach(function(post) { %>
+        <li>
+          <img src="<%= post.imageUrl %>" width="400" height="400" />
+          <div>
+            <h3><%= post.message %></h3>
+            <p>Created <%= post.createdAt %></p>
+          </div>
+        </li>
+        <% }); %>
+      </ul>
+    </div>
   </body>
   <%- include('_footer') -%>
 </html>

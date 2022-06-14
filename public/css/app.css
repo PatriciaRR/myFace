@@ -1,55 +1,223 @@
 body {
-    font: normal 15px Verdana black;
-    margin: 0px;
+  background-color: #c9c9c9;
+  color: darkslategrey;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0px;
 }
 
-.navigationlinks {
-    background-color: aliceblue;
-    top: 25px;
-    bottom: 25px;
+.navigation-bar {
+  top: 25px;
+  bottom: 25px;
+  height: 50px;
+  display: inline-block;
+  z-index: 0;
+}
+
+.navigation-menu {
+  list-style: none;
+  height: 100px;
+  position: relative;
+  overflow: visible;
+  z-index: 0;
+  text-align: right;
+  padding-right: 2%;
+}
+
+.header-list {
+  list-style: none;
+  z-index: 0;
 }
 
 .title {
-    position: sticky;
-    font: 100px;
+  font-weight: 600;
+  font-size: 50px;
+  text-align: left;
+}
+
+.name-links {
+  font-size: 20px;
 }
 
 .button {
-    background-color: rgb(204, 240, 204);
-    border: none;
-    color: black;
-    padding: 20px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
+  background-color: rgb(204, 240, 204);
+  border: none;
+  color: black;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
 }
 
 .postContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 50px;
-    column-gap: 100px;
-    justify-items: left;
-    width: 100%;
-    margin: auto;
-    padding-top: 30px ;
-    list-style-type: none;  
-}
-  
-.post {
-    background-color: white;
-    list-style-type: none;
-    width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 50px;
+  column-gap: 50px;
+  justify-items: left;
+  width: 100%;
+  margin: auto;
+  padding-top: 30px;
+  list-style-type: none;
 }
 
-.italics {
-    font-style:italic;
-    font-size: 12px;
+.post {
+  background-color: white;
+  list-style-type: none;
+  width: 500px;
 }
-  
 
 img {
-    object-fit: cover; 
+  object-fit: cover;
 }
-  
+
+.form-structure {
+  padding: 15px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.individual-posts {
+  background-color: #c9c9;
+  width: 80%;
+  margin-bottom: 20px;
+  display: inline-block;
+  margin-left: 20px;
+  transition: transform 0.3s;
+  width: 500px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.post-author {
+  margin-bottom: 0;
+}
+
+.secondary-information {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.like-button {
+  padding: 5px 20px;
+}
+
+/* Create user and create post styling  */
+.form-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.input-style {
+  width: 80%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.vertical-form {
+  width: 100%;
+  padding-left: 1/3fr;
+  padding-right: 1/3fr;
+  position: absolute;
+  left: 30%;
+  width: 450px;
+}
+
+.create-new {
+  text-align: center;
+}
+
+.submit-button {
+  margin-top: 20px;
+  background-color: rgb(204, 240, 204);
+  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+html {
+  background-color: #c9c9c9;
+}
+
+.nav-button {
+  display: inline;
+}
+
+.profile-image {
+  position: relative;
+  background-color: rgb(10, 96, 122);
+  bottom: 5%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+  border: black 2px solid;
+  border-radius: 50%;
+  z-index: 1;
+}
+.all-post-container {
+  position: relative;
+  bottom: 300px;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+.all-posts {
+  position: relative;
+
+  list-style: none;
+}
+
+.cover-image {
+  position: relative;
+  width: 100%;
+}
+
+.username {
+  position: relative;
+  left: 30%;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.main {
+  margin-bottom: 30px;
+}
+
+.namebox {
+  position: relative;
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  width: 80%;
+  text-align: left;
+  margin-right: 0;
+  bottom: 300px;
+}
+
+.profile-image-container {
+  position: relative;
+  width: 40%;
+  margin-right: 0px;
+  bottom: 100px;
+  left: 25px;
+}
+
+.subtitle {
+  position: relative;
+  bottom: 300px;
+  margin-left: 5%;
+}
+
+.buttonContainer {
+  display: block;
+}

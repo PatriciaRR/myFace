@@ -2,11 +2,9 @@
   <%- include('_head') -%> <%- include('_header') -%>
   <body>
     <h1 class="title">All posts</h1>
-    <button><a href="/posts/create/" class="button">New Post</a></button>
-
-    <ul class="postContainer" <% postList.results.forEach(function(post) {%>
-      <li class>
-        <p><%= post.message %></p>
+    <ul class="postContainer">
+      <% postList.results.forEach(function(post) {%>
+      <li class="individual-posts">
         <div class="imageContainer">
           <img
             src="<%= post.imageUrl %>"
@@ -14,26 +12,38 @@
             alt="Photo posted by user"
           />
         </div>
-        <p>
+        <h3><%= post.message %></h3>
+        <p class="post-author">
           Posted by
-          <a href="/users/<%= post.postedBy.name %>/">
+          <a href="/users/<%= post.postedBy.id %>/">
             <%= post.postedBy.name %></a
           >
         </p>
-        <p class="italics">
+        <p class="secondary-information">
           Created on <%=format(post.createdAt, "dd-MM-yyyy HH:mm:ss") %>
         </p>
+        <p class="secondary-information">Post ID: <%= post.id %></p>
         <p><%= post.likedBy.length %> likes</p>
-        <p><button onclick="likePost(<%= post.id %>)">Like</button></p>
+
+        <p>
+          <button class="like-button" onclick="likePost(<%= post.id %>)">
+            Like &#128578;
+          </button>
+        </p>
       </li>
       <% }); %>
     </ul>
 
-    <nav class="navigationLinks">
+    <nav class="navigation-bar">
       <%if (postList.previous) { %>
-      <a href="<%= postList.previous %>">Previous</a>
+      <button class="nav-button">
+        <a href="<%= postList.previous %>">&#9664;&#65039; Previous</a>
+      </button>
+      <br />
       <% } %> <%if (postList.next) { %>
-      <a href="<%= postList.next %>">Next</a>
+      <button class="nav-button">
+        <a href="<%= postList.next %>">Next &#9654;&#65039;</a>
+      </button>
       <% } %>
     </nav>
   </body>

@@ -1,31 +1,27 @@
 <html lang="en-gb">
-<%- include('_head') -%>
-<%- include('_header') -%>
-<body>
-<h1>Create User</h1>
-<form method="post" action="/users/create">
-    <label>
-        Name:
-        <input type="text" name="name"/>
-    </label>
-    <label>
-        Username:
-        <input type="text" name="username"/>
-    </label>
-    <label>
-        Email:
-        <input type="text" name="email"/>
-    </label>
-    <label>
-        ProfileImageUrl:
-        <input type="text" name="profileImageUrl"/>
-    </label>
-    <label>
-        CoverImageUrl:
-        <input type="text" name="coverImageUrl"/>
-    </label>
-    <button type="submit">Submit</button>
-</form>
-</body>
-<%- include('_footer') -%>
+  <%- include('_head') -%> <%- include('_header') -%>
+  <body>
+    <form class="vertical-form" method="post" action="/users/create">
+      <h1>Create User</h1>
+      <label>
+        Name: <input class="input-style" type="text" id="fname" name="firstname"
+        placeholder="Your name..." / required>
+      </label>
+      <label>
+        Username: <input class="input-style" type="text" id="uname"
+        name="username" placeholder="Your username..." / required>
+      </label>
+      <label>
+        Email: <input class="input-style" type="email" id="email" name="email"
+        placeholder="Your email..." / required>
+      </label>
+      <label>
+        ProfileImageUrl: <input class="input-style" type="text"
+        name="profileImageUrl" / required>
+      </label>
+
+      <button class="submit-button" type="submit">Create New Profile</button>
+    </form>
+  </body>
+  <%- include('_footer') -%>
 </html>
